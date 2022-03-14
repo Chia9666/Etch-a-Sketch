@@ -248,4 +248,13 @@ footer {
     font-size: 20px;
 }
 
-
+/* github style + html icon head link*/
+.fa-github {
+    color: #333;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }

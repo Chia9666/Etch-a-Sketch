@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="container"><h1>Etch-a-Sketch</h1></div>
+    </section>
+
+    <main>
+      <div class="settings">
+        <div class="colorPicker">
+          <input id="colorPicker" type="color" value="#9bcfdb" />
+        </div>
+        <button id="brushBtn" class="btn">Brush</button>
+        <button id="rgbBtn" class="btn">RGB</button>
+        <button id="eraserBtn" class="btn">Eraser</button>
+        <button id="clearBtn" class="btn">Clear</button>
+        <div id="sizeValue" class="sizeValue">16 x 16</div>
+        <input id="sizeSlider" type="range" min="16" value="1" max="64" />
+      </div>
+      <div id="grid">abc</div>
+    </main>
+
+    <footer>
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        KalPei
+        <a href="https://github.com/Chia9666" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

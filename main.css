@@ -24,6 +24,7 @@ body {
     text-align: center;
     color: #4b525f;
     background-color: #9bcfdb;
+    padding: 24px;
 }
 
 /* black-color #24272E or #4b525f */
@@ -225,11 +226,10 @@ input[type=range] {
   }
 
 .grid {
-    display: grid;
-    width: 550px;
-    height: 550px;
-    background-color: whitesmoke;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 15px;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 15px;
 }
 
 /* FOOTER */

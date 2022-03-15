@@ -11,12 +11,13 @@ const board = document.querySelector("#grid");
 colorPicker_input.onchange = (e) => setCurrentColor(e.target.value);
 sizeSlider_input.onchange = (e) => changeSize(e.target.value);
 sizeSlider_input.onmousemove = (e) => updateSizeLabel(e.target.value);
-eraser_btn.addEventListener("click", setCurrentColor("white"));
+eraser_btn.addEventListener("click", eraserMode);
 clear_btn.addEventListener("click", clearBoard);
 
 let DEFAULT_SIZE = 16;
 let DEFAULT_COLOR = "black";
 
+let click = true;
 let currentColor = DEFAULT_COLOR;
 let currentSize = DEFAULT_SIZE;
 
@@ -48,7 +49,13 @@ function clearGrid(size) {
 }
 
 function changeColor() {
-  this.style.backgroundColor = color;
+  if (click) {
+    this.style.backgroundColor = color;
+  }
+}
+
+function eraserMode() {
+  color = "white";
 }
 
 function setCurrentColor(colorChoice) {
@@ -63,10 +70,15 @@ function createBoard(size) {
   for (let i = 0; i < gridSize; i++) {
     let square = document.createElement("div");
     square.addEventListener("mouseover", changeColor);
-    square.addEventListener("mousedown", changeColor);
     board.insertAdjacentElement("beforeend", square);
   }
 }
+
+document.querySelector("body").addEventListener("click", (e) => {
+  if (e.target.tagName != "button") {
+    click = !click;
+  }
+});
 
 window.onload = () => {
   setupGrid(DEFAULT_SIZE);
